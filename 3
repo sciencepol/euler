@@ -1,0 +1,17 @@
+number = 600851475143
+limit = number ** 0.5
+divisor = 1
+factors = []
+while divisor < limit:
+    if number % divisor == 0:
+        factors.append(divisor)
+    divisor += 1
+def checkprime(n):
+    for x in range(2, int(n**0.5)+1):
+        if n % x == 0:
+            return False
+    return True
+largest = 0
+for i in factors:
+    if checkprime(i):
+        largest = i
