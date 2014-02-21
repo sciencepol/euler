@@ -1,0 +1,15 @@
+#1
+below = 1000
+multiples = []
+multiples15 = []
+for i in range(below):
+    if i % 3 == 0:
+        multiples.append(i)
+    if i % 5 == 0:
+        multiples.append(i)
+total = 0
+for i in multiples:
+    total += i
+for i in range(below):
+    if i % 15 == 0:
+        total -= i
