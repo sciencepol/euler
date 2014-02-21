@@ -1,0 +1,15 @@
+def generate(a):
+    if a == 1 or a == 0:
+        return 1
+    else:
+        return generate(a-1)+generate(a-2)
+number = 0
+sumfib = 0
+check = 1
+while number < 4000000:
+    fib = generate(check)
+    check += 1
+    if fib % 2 == 0:
+        sumfib += fib
+    number = fib
+    
