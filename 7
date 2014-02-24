@@ -1,0 +1,17 @@
+def isPrime(n):
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
+            return False
+
+    return True
+check = 0
+num = 1
+while check != 10002:
+    prime = False
+    while not prime:
+        if isPrime(num):
+            prime = True
+        num += 1
+    check += 1
+    
+print (num-1)
